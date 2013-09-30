@@ -30,7 +30,7 @@ void renverser_phrase(char *texte){
 }
 
 int main(){
-	char chaine[20] = "King of the North !";
+	char chaine[20] = "King in the North !";
 	printf("%s -- > ", chaine);
 	renverser_phrase(chaine);
 	printf("%s\n", chaine);

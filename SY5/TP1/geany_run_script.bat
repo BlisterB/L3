@@ -1,4 +1,4 @@
-"./Exercice2"
+"./Exercice3"
 
 pause
 del "%0"

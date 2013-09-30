@@ -19,12 +19,13 @@ char* itineraire(char* rep1, int n1, char* rep2, int n2){
 	}
 	
 	//2
-	int compteur_slash = 1;
+	int compteur_slash = 0;
 	while(*p1){
 		if(*p1 == '/')
 			compteur_slash++;
 		p1++;
 	}
+	if (compteur_slash > 0) compteur_slash++;
 	
 	//3
 	int i;
@@ -39,6 +40,8 @@ char* itineraire(char* rep1, int n1, char* rep2, int n2){
 		p++;
 	}
 	//Copie de la partie différente de rep2
+	if(*p2 == '/' && *(p2+1) != '\0')
+		p2++;
 	while(*p2){
 		*p = *p2;
 		p++;
@@ -49,10 +52,11 @@ char* itineraire(char* rep1, int n1, char* rep2, int n2){
 }
 
 int main(void){
-	char *rep1 = "/mehdi/SY5/tp1/rep1", *rep2 = "/mehdi/AL3/TP6/rep2";
+	char *rep1 = "/mehdi/SY5/TP5", *rep2 = "/mehdi/AL3/TP6/rep2";
 	char *chemin = itineraire(rep1, strlen(rep1), rep2, strlen(rep2));
 	
-	printf("%s\n", chemin);
+	printf("Pour aller de %s à %s :\n%s\n", rep1, rep2, chemin);
+	free(chemin);
 	
 	return 1;
 }
