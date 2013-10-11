@@ -1,0 +1,8 @@
+class ListeChainee{
+	ListeChainee suivant;
+	ListeChainee precedent;
+
+	public ListeChainee(){
+		
+	}
+}
