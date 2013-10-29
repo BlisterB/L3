@@ -1,0 +1,8 @@
+Pour la commande ls -f
+-On ouvre le repertoire avec la commande opendir (nom de repertoire)
+-Opendir renvois un pointeur sur DIR, DIR *, qu'est ce pinteur qu'il faut faut passer à la foncion readdir.
+-La fonction readdir renvois un struct direct *
+-On recupere le champ d-meme de la structure dirent pour l'afficher
+
+stat(nom_du_repertoire, &s)
+S_ISDIR(s.stmode)
