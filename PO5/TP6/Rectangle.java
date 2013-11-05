@@ -1,5 +1,5 @@
 public class Rectangle extends Figure{
-	private largeur, hauteur;
+	private int largeur, hauteur;
 	
 	public Rectangle(int x, int y, int largeur, int hauteur){
 		super(x, y);
@@ -8,7 +8,7 @@ public class Rectangle extends Figure{
 	}
 	
 	public void affiche(){
-		System.out.printf("Rectangle\nCentre : (%d,%d)\nLargeur : %d\nHauteur : %d\n", x, y, largeur, hauteur);
+		System.out.printf("Rectangle\nCentre : (%d,%d)\nLargeur : %d\nHauteur : %d\n", this.getPosX(), this.getPosY(), largeur, hauteur);
 	}
 	
 	public int getLargeur(){
@@ -17,5 +17,9 @@ public class Rectangle extends Figure{
 	
 	public int getHauteur(){
 		return hauteur;
+	}
+	
+	public Figure deformer(double coeffH, double coeffV){
+		return new Rectangle(this.getPosX(), this.getPosY(), (int)(largeur * coeffH), (int)(hauteur * coeffV));
 	}
 }

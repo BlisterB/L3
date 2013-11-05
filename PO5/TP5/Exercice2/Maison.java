@@ -1,9 +1,8 @@
 class Maison extends Batiment{
 	private int nbPieces;
 	private int surfaceJardin;
-	private Personne locataire;
 	
-	public Maison(String adresse, int surfaceH, int surfaceJ, int nbPieces, Personne proprietaire, Personne l){
+	public Maison(String adresse, int surfaceH, int surfaceJ, int nbPieces, Personne proprietaire){
 		super(adresse, surfaceH, proprietaire);
 		this.nbPieces = surfaceJ;
 		this.surfaceJardin = surfaceJ;
@@ -19,9 +18,5 @@ class Maison extends Batiment{
 	
 	public double impot(){
 		return (0.56 * this.getSurfaceHabitable() + 1.5 * surfaceJardin);
-	}
-	
-	public Personne getLocataire(){
-		return locataire;
 	}
 }
