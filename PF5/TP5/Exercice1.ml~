@@ -1,0 +1,6 @@
+type unop = Cos | sin;;
+type binop = Plus | Moins | Fois;;
+type expr = Num of float
+	    |Var of string
+	    |Unop of unop * exp
+	    |Binop of binop * expr * expr;;

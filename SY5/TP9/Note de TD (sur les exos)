@@ -1,0 +1,17 @@
+Exercice 1 :
+-Le processus pere va créer un tube avec la commande pipe.
+-Creation du processeus fils avec un fork. Le fils lit sur l'entrée standard et écrit dans le tube en utilisant fd[1]. Fin du processus fils
+-Le pere lit dans le tube en utilisant fd[0] et en utilisant fd[0] et affiche ce qu'il lit.
+
+Exercice 2 :
+int main(int argc, char* argv[]){
+	calc(arc - 1, argv + 1; 1);
+}
+void calc(int argc, char * argv[], int des)
+
+_La fonction calc est recursive
+				op expression1 expression2
+_Elle appelle la fonction d'un parseur qui renvoie l'indice de la deuxieme expression.
+_Elle va créer deux tubes
+_Chaque fils appelle récursivement la fonciton calc en lui pasant en argument la nouvelle expression et le descripteur en ecriture du tube1 où tube2 selon le fils
+On s'arrete quand on a un entier en position zero de la listes des arguments CAQ quand argv[0] est un entier
